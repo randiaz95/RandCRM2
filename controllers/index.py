@@ -60,7 +60,7 @@ async def login(auth: AuthLogin):
     clean_email = clean(auth.email)
     clean_password = clean(auth.password)
     query = users.select()
-    all_users = database.fetch_one()
+    all_users = database.fetch_one( )
     df = pd.read_sql(f"""SELECT 
                             id
                         FROM 
